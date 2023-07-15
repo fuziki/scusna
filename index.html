@@ -1,0 +1,28 @@
+<style>
+video {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+  border: 1px solid #262626;
+}
+</style>
+
+<p><video id="video" autoplay></video></p>
+<p><button id="start">Start</button><button id="stop">Stop</button></p>
+
+<script type="text/javascript">
+const video = document.getElementById("video");
+document.getElementById("start").addEventListener("click", async () => {
+  const options = {
+    video: {
+    },
+    audio: false
+  };
+  video.srcObject = await navigator.mediaDevices.getDisplayMedia(options);
+});
+document.getElementById("stop").addEventListener("click", () => {
+  video.srcObject.getTracks()
+    .forEach(track => track.stop());
+  video.srcObject = null;
+});
+</script>
