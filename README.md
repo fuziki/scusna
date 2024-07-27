@@ -1,5 +1,5 @@
 # scusna
-Scusna is a versatile open-source tool designed for capturing and showcasing screen content on web pages.
+Scusna is an open-source tool designed for capturing and showcasing screen content on web pages.
 
 # GitHub Pages  
 https://fuziki.github.io/scusna/
